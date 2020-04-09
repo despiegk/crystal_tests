@@ -3,17 +3,15 @@
 #TODO: put the class model here
 
 class Project
-    def initialize(name : String)
-      @name = name
-      @id = 0
-    end
+  JSON.mapping(
+    name: String
+  )
   end
 
 class Story
-  def initialize(name : String)
-    @name = name
-    @id = 0
-  end
+  JSON.mapping(
+    project: Int32
+  )
 end
 
 class AuthResponse

@@ -17,9 +17,33 @@ module Taigaclient
     headers: {"Content-Type" => "application/json"}
     )
 
-  puts(resp.status_code)
-  AuthResponse.from_json(resp.body)
-  puts(resp.body)
+  auth_resp = AuthResponse.from_json(resp.body)
+  auth_token = auth_resp.auth_token
+
+
+
+  resp = Crest.get(
+    "https://staging.circles.threefold.me/api/v1/projects",
+    headers: {"Content-Type" => "application/json", "Authorization" => "Bearer #{auth_token}"}
+    )
+
+
+  projects = Array(Project).from_json(resp.body)
+
+  resp = Crest.get(
+    "https://staging.circles.threefold.me/api/v1/userstories",
+    headers: {"Content-Type" => "application/json", "Authorization" => "Bearer #{auth_token}"}
+    )
+
+
+  stories = Array(Story).from_json(resp.body)
+
+  puts(projects[1].name)
+  puts(stories[1].project)
+
+
+
+
 end
 
 
