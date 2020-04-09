@@ -11,3 +11,8 @@ targets:
 crystal: 0.34.0
 
 license: MIT
+
+dependencies:
+  sidekiq:
+    github: mperham/sidekiq.cr
+    branch: master
