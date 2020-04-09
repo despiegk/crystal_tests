@@ -1,0 +1,18 @@
+name: sample
+version: 0.1.0
+
+authors:
+  - kristof <kristof@incubaid.com>
+
+targets:
+  sample:
+    main: src/sample.cr
+
+crystal: 0.34.0
+
+license: MIT
+
+dependencies:
+  sidekiq:
+    github: mperham/sidekiq.cr
+    branch: master
