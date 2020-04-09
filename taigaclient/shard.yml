@@ -1,0 +1,17 @@
+name: taigaclient
+version: 0.1.0
+
+authors:
+  - kristof <kristof@incubaid.com>
+
+targets:
+  taigaclient:
+    main: src/taigaclient.cr
+
+crystal: 0.34.0
+
+license: MIT
+
+dependencies:
+  crest:
+    github: mamantoha/crest
