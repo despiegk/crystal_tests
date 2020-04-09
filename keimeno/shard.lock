@@ -1,0 +1,6 @@
+version: 1.0
+shards:
+  keimeno:
+    github: robacarp/keimeno
+    version: 0.3.0
+
