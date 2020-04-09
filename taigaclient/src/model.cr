@@ -6,5 +6,12 @@ class Project
     def initialize(name : String)
       @name = name
       @id = 0
-      ...
     end
+  end
+
+class Story
+  def initialize(name : String)
+    @name = name
+    @id = 0
+  end
+end
