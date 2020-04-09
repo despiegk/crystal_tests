@@ -15,3 +15,9 @@ class Story
     @id = 0
   end
 end
+
+class AuthResponse
+  JSON.mapping(
+    auth_token: String
+  )
+end

@@ -11,14 +11,15 @@ module Taigaclient
   # TODO: fetch stories
   # TODO: put them in nice data objects in memory
 
-  x = Crest.post(
+  resp = Crest.post(
     "https://staging.circles.threefold.me/api/v1/auth",
     form: {:username => "admin", :password => "123123", :type => "normal"}.to_json,
     headers: {"Content-Type" => "application/json"}
     )
 
-  puts(x.status_code)
-  puts(x.body)
+  puts(resp.status_code)
+  AuthResponse.from_json(resp.body)
+  puts(resp.body)
 end
 
 
