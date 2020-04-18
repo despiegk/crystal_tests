@@ -11,9 +11,9 @@ class HelloWorldHandler < HelloWorld
   def method_name(request : TheRequest) : TheResponse
     o=TheResponse.new()
     o.data = "Hello #{request.text}"
-    #TODO: how do I populate the info here?
+    #TODO: how do I populate the info here (add item to array)? 
     l=o.results
-    pp l
+    # pp l
     o
   end
 end
