@@ -1,0 +1,13 @@
+name: subprocess
+version: 0.1.0
+
+authors:
+  - kristof <kristof@incubaid.com>
+
+targets:
+  subprocess:
+    main: src/subprocess.cr
+
+crystal: 0.34.0
+
+license: MIT

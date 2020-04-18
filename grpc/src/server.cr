@@ -11,8 +11,17 @@ class HelloWorldHandler < HelloWorld
   def method_name(request : TheRequest) : TheResponse
     o=TheResponse.new()
     o.data = "Hello #{request.text}"
-    #TODO: how do I populate the info here (add item to array)? 
-    l=o.results
+    o.results = Array(SearchRequest).new()
+    
+    o.results.try do |theresults|
+        sreq = SearchRequest.new()
+        sreq.query = "strrr"
+        sreq.page_number = 155
+        theresults << sreq
+
+    end
+    puts o
+    l=o.results 
     # pp l
     o
   end
