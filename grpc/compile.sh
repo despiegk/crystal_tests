@@ -1,3 +1,4 @@
+mkdir -p src/protobufs
 protoc -I protos \
     --grpc_out=src/protobufs \
     --crystal_out=src/protobufs \
