@@ -11,3 +11,9 @@ targets:
 crystal: 0.34.0
 
 license: MIT
+
+dependencies:
+  watchbird:
+    github: agatan/watchbird
+  exec:
+    github: j8r/exec.cr

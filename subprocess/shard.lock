@@ -1,0 +1,10 @@
+version: 1.0
+shards:
+  exec:
+    github: j8r/exec.cr
+    version: 0.4.1
+
+  watchbird:
+    github: agatan/watchbird
+    commit: dda8949b0f2233a5fccf15bff7e8f5a96a84a44b
+
