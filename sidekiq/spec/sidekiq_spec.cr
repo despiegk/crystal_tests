@@ -1,6 +1,6 @@
 require "./spec_helper"
 
-describe Sample do
+describe Sidekiq do
   # TODO: Write tests
 
   it "works" do

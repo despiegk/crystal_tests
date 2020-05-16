@@ -7,39 +7,48 @@
 # pp output
 # system "mc"
 
-# stdout = IO::Memory.new
+stdout = IO::Memory.new
 # stdout2 = IO::Memory.new
 # stderr = IO::Memory.new
 # s = Process.new("mc",shell: true, output: Process::ORIGINAL_STDOUT, input: Process::ORIGINAL_STDIN, error: Process::ORIGINAL_STDOUT)
 # require "log"
 
-out1,in1 = IO.pipe
-out2,in2 = IO.pipe
+out1,in1 = IO.pipe(read_blocking=false,write_blocking=false)
+out2,in2 = IO.pipe(read_blocking=false,write_blocking=false)
 
-s = Process.new("find /",shell: true, output: in1, error: in2)
+s = Process.new("find /tmp/",shell: true, output: in1, error: in2)
+# s = Process.new("find /tmp/",shell: true, output: stdout, error: stdout)
+until s.terminated?
+    # pp out1.closed?
+    pp out1.gets()
+    # pp out1.read_char()
+    # pp out1.read_byte()
+    # pp out1.readline
+    # pp stdout.gets()
+end
+pp s
 
+# spawn do
+#     loop do
+#         pp out1.gets
+#         # if out1.peek
+#         #     pp out1.gets
+#         # end
+#         # if out2.peek
+#         #     pp out2.gets
+#         # end
+#         # sleep 0.001
+#     end
+#   end
 
-spawn do
-    loop do
-        pp out1.gets
-        # if out1.peek
-        #     pp out1.gets
-        # end
-        # if out2.peek
-        #     pp out2.gets
-        # end
-        # sleep 0.001
-    end
-  end
+# spawn do
+#     loop do
+#         pp "t"
+#         sleep 0.1
+#     end
+# end  
 
-spawn do
-    loop do
-        pp "t"
-        sleep 0.1
-    end
-end  
-
-sleep 20.second
+# sleep 20.second
 # s = Process.new("find /",shell: true, output: stdout2, error: stdout2)
 
 

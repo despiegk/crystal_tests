@@ -1,0 +1,25 @@
+name: sidekiq
+version: 0.1.0
+
+authors:
+  - kristof <kristof@incubaid.com>
+
+targets:
+  sidekiq:
+    main: src/sidekiq.cr
+
+crystal: 0.34.0
+
+license: MIT
+
+dependencies:
+  kemal:
+    github: kemalcr/kemal
+    version: ~> 0.26.1
+  kemal-session:
+    github: kemalcr/kemal-session
+    branch: master
+    version: ~> 0.12.0
+  sidekiq:
+    github: mperham/sidekiq.cr
+    branch: master
