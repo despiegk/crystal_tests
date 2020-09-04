@@ -1,0 +1,6 @@
+version: 1.0
+shards:
+  rucksack:
+    git: https://github.com/busyloop/rucksack.git
+    version: 1.0.3
+

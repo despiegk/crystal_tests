@@ -1,0 +1,14 @@
+version: 1.0
+shards:
+  msgpack:
+    github: crystal-community/msgpack-crystal
+    version: 0.10.0
+
+  tarantool:
+    github: Ethreal/tarantool.cr
+    version: 0.2.4
+
+  time_format:
+    github: vladfaust/time_format.cr
+    version: 0.1.1
+

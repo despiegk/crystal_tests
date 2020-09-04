@@ -1,0 +1,17 @@
+name: mosquito
+version: 0.1.0
+
+authors:
+  - kristof <kristof@incubaid.com>
+
+targets:
+  mosquito:
+    main: src/mosquito.cr
+
+crystal: 0.34.0
+
+license: MIT
+
+dependencies:
+  mosquito:
+    github: robacarp/mosquito

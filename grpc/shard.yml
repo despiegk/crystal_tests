@@ -1,0 +1,17 @@
+name: grpc
+version: 0.1.0
+
+authors:
+  - kristof <kristof@incubaid.com>
+
+targets:
+  grpc:
+    main: src/grpc.cr
+
+crystal: 0.34.0
+
+license: MIT
+
+dependencies:
+  grpc:
+    github: jgaskins/grpc
